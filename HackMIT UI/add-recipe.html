@@ -78,18 +78,19 @@
 			</section>		
 			<!-- End banner Area -->
 		
-			<form action="#">
+			<form id='recipe-input' action="#">
 				<h3>Recipe Title</h3>
 				<div class="mt-10">
 					<input type="text" name="title" placeholder="title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'title'" required class="single-input">
 				</div>
 				<h3>Ingredients</h3>
-				<div class="mt-10">
+				<div id="ingredients-field" class="mt-10">
 					<input type="text" name="Ingredients" placeholder="flour" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingredients'" required class="single-input">
 				</div>
+				<a id = "ingredient-button" onClick="nextIngredient();" class="genric-btn primary small">next ingredient</a>
 				<h3>Steps</h3>
 				<div class="mt-10">
-					<input type="text" name="Step" placeholder="mix flour and sugar" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
+					<input id="steps-field" type="text" name="Step" placeholder="mix flour and sugar" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
 				</div>
 				<!-- For Gradient Border Use -->
 				<!-- <div class="mt-10">

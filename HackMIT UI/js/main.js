@@ -115,3 +115,10 @@ $(document).ready(function(){
       });   
 
  });
+
+function nextIngredient() {
+  console.log("in this function");
+  var oldField = document.getElementById('ingredients-field').cloneNode(true);
+  var newField = oldField.cloneNode(true);
+  document.getElementById("recipe-input").appendChild(newField);
+}
