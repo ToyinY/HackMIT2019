@@ -61,7 +61,7 @@
 				<!-- Header -->
 			</div class="container">
 			<div class="add-recipe-header">
-				<h2 class="text-white text-center">Add a Recipe</h2>
+				<h2 class="text-white text-center">Sign Up</h2>
 			</div>
 		</div>
 		<!-- End Header -->
@@ -70,25 +70,24 @@
 		<section class="about-generic-area section-gap">
 			<div class="container add-ingredients">
 				<form class="ingredients-form" id='recipe-input' action="#">
-					<h3>Recipe Title</h3>
+					<h3>Name</h3>
 					<div class="mt-10">
 						<input type="text" name="title" placeholder="title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'title'" required class="single-input">
 					</div>
-					<h3>Ingredients</h3>
+					<h3>Username</h3>
 					<div id='ingredients-list'>
 						<div id="ingredients-field" class="mt-10">
 							<input type="text" name="ingredient" placeholder="ingredient" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ingredient'" required class="single-input">
 						</div>
 					</div>
-					<a id = "ingredient-button" onClick="nextIngredient();" class="genric-btn primary small">next ingredient</a>
-					<h3>Directions</h3>
+					<a id = "ingredient-button" onClick="nextIngredient();" class="generic-btn primary small">next ingredient</a>
+					<h3>Password</h3>
 					<div id='steps-list'>
 						<div class="mt-10">
 							<input id="steps-field" type="text" name="step" placeholder="step" onfocus="this.placeholder = ''" onblur="this.placeholder = 'step'" required class="single-input">
 						</div>
 					</div>
-					<a id = "step-button" onClick="nextStep();" class="genric-btn primary small">next step</a>
-					<textarea></textarea>
+					<a id = "step-button" onClick="nextStep();" class="generic-btn primary small">next step</a>
 				</form>	
 				<a href="recipes.html" class="genric-btn primary circle">SUBMIT</a>
 			</div>
