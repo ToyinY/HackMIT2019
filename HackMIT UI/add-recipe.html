@@ -69,7 +69,7 @@
 					<div class="row height align-items-center justify-content-center">
 						<div class="col-lg-10">
 							<div class="generic-banner-content">
-								<h2 class="text-white text-center">The Generic Page</h2>
+								<h2 class="text-white text-center">Manual Recipe Input</h2>
 								<p class="text-white">It won’t be a bigger problem to find one video game lover in your <br> neighbor. Since the introduction of Virtual Game.</p>
 							</div>							
 						</div>
@@ -78,19 +78,25 @@
 			</section>		
 			<!-- End banner Area -->
 		
-			<form action="#">
+			<form id='recipe-input' action="#">
 				<h3>Recipe Title</h3>
 				<div class="mt-10">
 					<input type="text" name="title" placeholder="title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'title'" required class="single-input">
 				</div>
 				<h3>Ingredients</h3>
-				<div class="mt-10">
-					<input type="text" name="Ingredients" placeholder="flour" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingredients'" required class="single-input">
+				<div id='ingredients-list'>
+					<div id="ingredients-field" class="mt-10">
+						<input type="text" name="Ingredients" placeholder="flour" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingredients'" required class="single-input">
+					</div>
 				</div>
+				<a id = "ingredient-button" onClick="nextIngredient();" class="genric-btn primary small">next ingredient</a>
 				<h3>Steps</h3>
-				<div class="mt-10">
-					<input type="text" name="Step" placeholder="mix flour and sugar" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
+				<div id='steps-list'>
+					<div class="mt-10">
+						<input id="steps-field" type="text" name="Step" placeholder="mix flour and sugar" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
+					</div>
 				</div>
+				<a id = "step-button" onClick="nextStep();" class="genric-btn primary small">next step</a>
 				<!-- For Gradient Border Use -->
 				<!-- <div class="mt-10">
 					<div class="primary-input">
