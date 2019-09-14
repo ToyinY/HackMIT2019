@@ -6,6 +6,7 @@
 /* =================================== */
 /*  Basic Style 
 /* =================================== */
+
 ::-moz-selection {
   /* Code for Firefox */
   background-color: #42d1ff;
@@ -919,25 +920,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .genric-btn.primary {
   color: #fff;
-  background: #42d1ff;
+  background: #a1f0c5;
   border: 1px solid transparent;
 }
 
 .genric-btn.primary:hover {
-  color: #42d1ff;
-  border: 1px solid #42d1ff;
+  color: #a1f0c5;
+  border: 1px solid #a1f0c5;
   background: #fff;
 }
 
 .genric-btn.primary-border {
-  color: #42d1ff;
-  border: 1px solid #42d1ff;
+  color: #a1f0c5;
+  border: 1px solid #a1f0c5;
   background: #fff;
 }
 
 .genric-btn.primary-border:hover {
   color: #fff;
-  background: #42d1ff;
+  background: #a1f0c5;
   border: 1px solid transparent;
 }
 
@@ -1251,6 +1252,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   line-height: 40px;
   border: none;
+  border-radius: 3px;
   outline: none;
   background: #f9f9ff;
   padding: 0 20px;
@@ -1933,7 +1935,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-gap {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .section-footer {
@@ -2869,7 +2871,19 @@ h6 {
   margin: 0;
 }
 
-/*For the shopping list*/
+/*Shopping list page*/
+.shopping-list-header {
+  display: block;
+  text-align: center;
+  padding: 50px;
+  background-color: #fac5d9;
+}
+
+.shopping-list-header h2 {
+  padding-bottom: 20px;
+  font-size: 70px;
+}
+
 .shoplist {
   padding-left: 10em;
 }
@@ -2882,8 +2896,50 @@ h6 {
   cursor: pointer;
 }
 
-/*Main page image*/
+/*Homepage image*/
 .mainpageimage {
   height: 50vh;
   width: 100%;
+}
+
+/*Add-recipe page*/
+.add-recipe-header {
+  display: block;
+  text-align: center;
+  padding: 50px;
+  background-color: #a1f0c5;
+}
+
+.add-recipe-header h2 {
+  padding-bottom: 20px;
+  font-size: 70px;
+}
+
+.add-ingredients {
+  width: 60%;
+}
+
+.ingredients-form {
+  padding-bottom: 1em;
+}
+
+input[type=text]:focus {
+  background-color: #f8f8f9;
+}
+
+.ingredients-form h3 {
+  padding-top: 15px;
+}
+
+/*Recipes page*/
+.recipe-header {
+  display: block;
+  text-align: center;
+  padding: 50px;
+  background-color: #f0cfa1;
+}
+
+.recipe-header h2 {
+  padding-bottom: 20px;
+  font-size: 70px;
 }
