@@ -1,5 +1,6 @@
 package com.example.recipesharing;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -51,5 +52,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void inputRecipe() {
+        Intent intent = new Intent(this, AddRecipe.class);
+        startActivity(intent);
     }
 }
