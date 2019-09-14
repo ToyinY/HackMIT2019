@@ -2881,3 +2881,9 @@ h6 {
 .shoplist-item {
   cursor: pointer;
 }
+
+/*Main page image*/
+.mainpageimage {
+  height: 50vh;
+  width: 100%;
+}
