@@ -127,3 +127,7 @@ function nextStep() {
   var newField = oldField.cloneNode(true);
   document.getElementById("steps-list").appendChild(newField);
 }
+
+function strikeThrough(thisid) {
+  document.getElementById(thisid).classList.toggle('stricken');
+}
