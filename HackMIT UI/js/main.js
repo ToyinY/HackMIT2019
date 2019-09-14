@@ -117,8 +117,13 @@ $(document).ready(function(){
  });
 
 function nextIngredient() {
-  console.log("in this function");
   var oldField = document.getElementById('ingredients-field').cloneNode(true);
   var newField = oldField.cloneNode(true);
-  document.getElementById("recipe-input").appendChild(newField);
+  document.getElementById("ingredients-list").appendChild(newField);
+}
+
+function nextStep() {
+  var oldField = document.getElementById('steps-field').cloneNode(true);
+  var newField = oldField.cloneNode(true);
+  document.getElementById("steps-list").appendChild(newField);
 }
