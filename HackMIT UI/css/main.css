@@ -58,7 +58,17 @@ body {
   position: relative;
 }
 
-ol, ul {
+ol {
+  margin: 20px;
+  padding: 0;
+  font-size: 16px;
+}
+
+li {
+  padding: 5px;
+}
+
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1923,7 +1933,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-gap {
-  padding: 120px 0;
+  padding: 100px 0;
 }
 
 .section-footer {
@@ -2839,7 +2849,7 @@ h6 {
 }
 
 .about-generic-area p {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .white-bg {
@@ -2857,4 +2867,9 @@ h6 {
 
 .switch-wrap p {
   margin: 0;
+}
+
+/*For the shopping list*/
+.shoplist {
+  padding-left: 10em;
 }
