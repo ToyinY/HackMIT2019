@@ -23,9 +23,6 @@ from flask import (Flask, render_template, sessions, flash, request, redirect, u
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'dev'
 
-# conn_str = 'mysql+mysqldb://root@/hackmit?unix_socket=/cloudsql/hackmit2019-252916:us-central1:hackmit2019>'
-# engine = create_engine(conn_str)
-
 # Connect to the database
 unix_socket = '/cloudsql/{}'.format('hackmit2019-252916:us-central1:hackmit2019')
 connection = pymysql.connect(user='root',
@@ -36,7 +33,7 @@ connection = pymysql.connect(user='root',
                              #cursorclass=pymysql.cursors.DictCursor
                              )
 
-@app.route('/register', methods=('GET', 'POST'))
+@app.route('/signup', methods=('GET', 'POST'))
 def register():
     """Register a new user.
     Validates that the username is not already taken. Hashes the
@@ -78,32 +75,32 @@ def register():
         #return redirect(url_for('index.html'))
 
     print('about to render something')
-    return render_template('register.html')
+    return render_template('signup.html')
 
-# @app.route('/login', methods=('GET', 'POST'))
-# def login():
-#     if request.method == 'POST':
-#         email = request.form['email']
-#         password = request.form['password']
-#         error = None
-#         user = connection.execute(
-#             'SELECT * FROM user WHERE email = ?', (email,)
-#         )
+@app.route('/login', methods=('GET', 'POST'))
+def login():
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        error = None
+        user = connection.cursor.execute(
+            'SELECT * FROM user WHERE email = ?', (email,)
+        )
 
-#         if user is None:
-#             error = 'Incorrect email.'
-#         elif not check_password_hash(user['password'], password):
-#             error = 'Incorrect password.'
+        if user == "0":
+            error = 'Incorrect email.'
+        elif user['password'] != password:
+            error = 'Incorrect password.'
 
-#         if error is None:
-#             # store the user id in a new session and return to the index
-#             session.clear()
-#             session['user_id'] = user['idUser']
-#             return redirect(url_for('index'))
+        if error is None:
+            # store the user id in a new session and return to the index
+            session.clear()
+            session['user_id'] = user['id']
+            return redirect(url_for('index'))
 
-#         flash(error)
+        flash(error)
 
-#     return render_template('login.html')
+    return render_template('login.html')
 
 
 @app.route('/')
@@ -117,9 +114,9 @@ def root():
 
     return render_template('index.html', times=dummy_times)
 
-# @app.route('/homepage')
-# def home():
-#     return render_template('homepage.html')
+@app.route('/homepage')
+def home():
+    return render_template('homepage.html')
 
 
 if __name__ == '__main__':
