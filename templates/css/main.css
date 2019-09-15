@@ -2626,3 +2626,16 @@ input:focus {
 .thin-text {
   font-weight: 200 !important;
 }
+
+/*Profile page*/
+.profile-header {
+  display: block;
+  text-align: center;
+  padding: 50px;
+  background-color: #f08981;
+}
+
+.profile-header h2 {
+  padding-bottom: 20px;
+  font-size: 70px;
+}
