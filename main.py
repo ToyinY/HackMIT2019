@@ -18,7 +18,7 @@ import pymysql
 from sqlalchemy import create_engine
 # from werkzeug.security import check_password_hash, generate_password_hash
 
-from flask import (Flask, render_template, sessions, flash, request)
+from flask import (Flask, render_template, sessions, flash, request, redirect, url_for)
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'dev'
@@ -58,10 +58,10 @@ def register():
             error = 'Email is required.'
         elif not pwd_not_hash:
             error = 'Password is required.'
-        # elif connection.execute(
-        #     'SELECT idUser FROM user WHERE email = ?', (email,)
-        # ).fetchone() is not None:
-        #     error = 'User {0} is already registered.'.format(email)
+          
+        elif connection.cursor().execute("SELECT `id` FROM `user_table` WHERE `email`=%s", (email,)) == "0":
+            error = 'User {0} is already registered.'.format(email)
+            print(connection.cursor().execute("SELECT `id` FROM `user_table` WHERE `email`=%s", (email,)))
 
         if error is None:
             with connection.cursor() as cursor:
@@ -71,10 +71,39 @@ def register():
                 print('past execute')
             connection.commit()
             print("I did things!")
+        else:
+            print("error is not none")
+            print(error)
         flash(error)
+        #return redirect(url_for('index.html'))
 
     print('about to render something')
     return render_template('register.html')
+
+# @app.route('/login', methods=('GET', 'POST'))
+# def login():
+#     if request.method == 'POST':
+#         email = request.form['email']
+#         password = request.form['password']
+#         error = None
+#         user = connection.execute(
+#             'SELECT * FROM user WHERE email = ?', (email,)
+#         )
+
+#         if user is None:
+#             error = 'Incorrect email.'
+#         elif not check_password_hash(user['password'], password):
+#             error = 'Incorrect password.'
+
+#         if error is None:
+#             # store the user id in a new session and return to the index
+#             session.clear()
+#             session['user_id'] = user['idUser']
+#             return redirect(url_for('index'))
+
+#         flash(error)
+
+#     return render_template('login.html')
 
 
 @app.route('/')
@@ -88,6 +117,10 @@ def root():
 
     return render_template('index.html', times=dummy_times)
 
+# @app.route('/homepage')
+# def home():
+#     return render_template('homepage.html')
+
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
@@ -97,10 +130,10 @@ if __name__ == '__main__':
     # the "static" directory. See:
     # http://flask.pocoo.org/docs/1.0/quickstart/#static-files. Once deployed,
     # App Engine itself will serve those files as configured in app.yaml.
-    app.secret_key = 'dev'
-    app.config['SESSION_TYPE'] = 'filesystem'
+    # app.secret_key = 'dev'
+    # app.config['SESSION_TYPE'] = 'filesystem'
 
-    sess.init_app(app)
+    # sess.init_app(app)
 
     app.run(host='127.0.0.1', port=8080, debug=True)
 # [START gae_python37_render_template]

@@ -1,16 +1,19 @@
-# import functools
-# import pymysql.cursors
-# from flask import (
-#     Blueprint, flash, g, redirect, render_template, request, session, url_for
-# )
-# from werkzeug.security import check_password_hash, generate_password_hash
+# # import functools
+# import pymysql
+# from sqlalchemy import create_engine
+# # from werkzeug.security import check_password_hash, generate_password_hash
 
-# connection = pymysql.connect(host='35.202.234.225',
-#                              user='root',
+# from flask import (Blueprint, Flask, render_template, sessions, flash, request, redirect, url_for)
+# # from werkzeug.security import check_password_hash, generate_password_hash
+
+# unix_socket = '/cloudsql/{}'.format('hackmit2019-252916:us-central1:hackmit2019')
+# connection = pymysql.connect(user='root',
 #                              password='root',
 #                              db='hackmit',
+#                              unix_socket=unix_socket,
 #                              charset='utf8mb4',
-#                              cursorclass=pymysql.cursors.DictCursor)
+#                              #cursorclass=pymysql.cursors.DictCursor
+#                              )
 
 # bp = Blueprint('auth', __name__, url_prefix='/auth')
 
