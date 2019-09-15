@@ -71,22 +71,14 @@
 		<section class="about-generic-area section-gap">
 			<div class="container add-user">
 				<form class="user-form" action="#">
-					<h3>First Name</h3>
-					<div class="mt-10">
-						<input type="text" name="firstname" placeholder="firstname" onfocus="this.placeholder = ''" onblur="this.placeholder = 'firstname'" required class="single-input">
-					</div>
-					<h3>Last Name</h3>
-					<div class="mt-10">
-						<input type="text" name="lastname" placeholder="lastname" onfocus="this.placeholder = ''" onblur="this.placeholder = 'lastname'" required class="single-input">
-					</div>
-					<h3>Email</h3>
-					<div class="mt-10">
-						<input type="email" name="email" placeholder="email@email.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'email@email.com'" required class="single-input">
-					</div>
-					<h3>Password</h3>
-					<div class="mt-10">
-						<input type="password" name="password" placeholder="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'password'" required class="single-input">
-					</div>
+					<h3><label for="first">First Name</label></h3>
+						<input name="first" id="first" type="text" placeholder="firstname" required class="single-input">
+					<h3><label for="last">Last Name</label></h3>
+						<input name="last" id="last" type="text" placeholder="lastname" required class="single-input">
+					<h3><label for="email">Email</label></h3>
+						<input name="email" id="email" type="email" placeholder="email@email.com" required class="single-input">
+					<h3><label for="password">First Name</label></h3>
+						<input name="password" id="password" type="password" placeholder="password" required class="single-input">
 				</form>	
 				<a href="homepage.html" class="genric-btn primary circle signup-button">CREATE ACCOUNT</a>
 			</div>

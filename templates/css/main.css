@@ -2621,3 +2621,8 @@ input:focus {
   padding-bottom: 20px;
   font-size: 70px;
 }
+
+/*Text in general*/
+.thin-text {
+  font-weight: 200 !important;
+}

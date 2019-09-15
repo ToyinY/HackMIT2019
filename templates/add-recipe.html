@@ -72,12 +72,16 @@
 				<form class="ingredients-form" id='recipe-input' action="#">
 					<h3>Recipe Title</h3>
 					<div class="mt-10">
-						<input type="text" name="title" placeholder="title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'title'" required class="single-input">
+						<input type="text" name="title" placeholder="title" required class="single-input">
+					</div>
+					<h3>Description</h3>
+					<div class="mt-10">
+						<textarea class="single-input" placeholder="add description here"></textarea>
 					</div>
 					<h3>Ingredients</h3>
 					<div id='ingredients-list'>
 						<div id="ingredients-field" class="mt-10">
-							<input type="text" name="ingredient" placeholder="ingredient" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ingredient'" required class="single-input">
+							<input type="text" name="ingredient" placeholder="ingredient" required class="single-input">
 						</div>
 					</div>
 					<a id = "ingredient-button" onClick="nextIngredient();" class="genric-btn primary small">next ingredient</a>
