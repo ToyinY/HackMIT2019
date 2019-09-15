@@ -60,36 +60,35 @@
 			<div class="main-wrapper">
 				<!-- Header -->
 			</div class="container">
-			<div class="add-recipe-header">
+			<div class="add-user-header">
 				<h2 class="text-white text-center">Sign Up</h2>
+				<h4>Have an account? <a href="login.html">Log in.</a></h4>
 			</div>
 		</div>
 		<!-- End Header -->
 
 		<!-- Start Shopping List -->
 		<section class="about-generic-area section-gap">
-			<div class="container add-ingredients">
-				<form class="ingredients-form" id='recipe-input' action="#">
-					<h3>Name</h3>
+			<div class="container add-user">
+				<form class="user-form" action="#">
+					<h3>First Name</h3>
 					<div class="mt-10">
-						<input type="text" name="title" placeholder="title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'title'" required class="single-input">
+						<input type="text" name="firstname" placeholder="firstname" onfocus="this.placeholder = ''" onblur="this.placeholder = 'firstname'" required class="single-input">
 					</div>
-					<h3>Username</h3>
-					<div id='ingredients-list'>
-						<div id="ingredients-field" class="mt-10">
-							<input type="text" name="ingredient" placeholder="ingredient" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ingredient'" required class="single-input">
-						</div>
+					<h3>Last Name</h3>
+					<div class="mt-10">
+						<input type="text" name="lastname" placeholder="lastname" onfocus="this.placeholder = ''" onblur="this.placeholder = 'lastname'" required class="single-input">
 					</div>
-					<a id = "ingredient-button" onClick="nextIngredient();" class="generic-btn primary small">next ingredient</a>
+					<h3>Email</h3>
+					<div class="mt-10">
+						<input type="email" name="email" placeholder="email@email.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'email@email.com'" required class="single-input">
+					</div>
 					<h3>Password</h3>
-					<div id='steps-list'>
-						<div class="mt-10">
-							<input id="steps-field" type="text" name="step" placeholder="step" onfocus="this.placeholder = ''" onblur="this.placeholder = 'step'" required class="single-input">
-						</div>
+					<div class="mt-10">
+						<input type="password" name="password" placeholder="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'password'" required class="single-input">
 					</div>
-					<a id = "step-button" onClick="nextStep();" class="generic-btn primary small">next step</a>
 				</form>	
-				<a href="recipes.html" class="genric-btn primary circle">SUBMIT</a>
+				<a href="homepage.html" class="genric-btn primary circle signup-button">CREATE ACCOUNT</a>
 			</div>
 		</section>
 		<!-- End Shopping List -->		

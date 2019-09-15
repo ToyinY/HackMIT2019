@@ -920,13 +920,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .genric-btn.primary {
   color: #fff;
-  background: #a1f0c5;
   border: 1px solid transparent;
 }
 
 .genric-btn.primary:hover {
-  color: #a1f0c5;
-  border: 1px solid #a1f0c5;
   background: #fff;
 }
 
@@ -1188,14 +1185,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .single-input {
+  padding: 12px 20px;
   display: block;
   width: 100%;
-  line-height: 40px;
+  line-height: 20px;
   border: none;
   border-radius: 3px;
   outline: none;
   background: #f9f9ff;
-  padding: 0 20px;
 }
 
 .single-input:focus {
@@ -2512,11 +2509,20 @@ h6 {
 }
 
 /*Add-recipe page*/
+.addrecipe-button {
+  background: #CFB53B;
+}
+
+.addrecipe-button:hover {
+  color: #CFB53B;
+  border: 1px solid #CFB53B;
+}
+
 .add-recipe-header {
   display: block;
   text-align: center;
   padding: 50px;
-  background-color: #a1f0c5;
+  background-color: #CFB53B;
 }
 
 .add-recipe-header h2 {
@@ -2539,12 +2545,46 @@ textarea {
   resize: none;
 }
 
-input[type=text]:focus {
+input:focus {
   background-color: #f8f8f9;
 }
 
 .ingredients-form h3 {
   padding-top: 15px;
+}
+
+/*Signup page*/
+.add-user-header {
+  display: block;
+  text-align: center;
+  padding: 50px;
+  background-color: #a1f0c5;
+}
+
+.add-user-header h2 {
+  padding-bottom: 20px;
+  font-size: 70px;
+}
+
+.add-user {
+  width: 40%;
+}
+
+.user-form {
+  padding-bottom: 1em;
+}
+
+.user-form h3 {
+  padding-top: 15px;
+}
+
+.signup-button {
+  background: #a1f0c5;
+}
+
+.signup-button:hover {
+  color: #a1f0c5;
+  border: 1px solid #a1f0c5;
 }
 
 /*Recipes page*/
@@ -2556,6 +2596,28 @@ input[type=text]:focus {
 }
 
 .recipe-header h2 {
+  padding-bottom: 20px;
+  font-size: 70px;
+}
+
+/*Login page*/
+.login-button {
+  background: #dccced;
+}
+
+.login-button:hover {
+  color: #dccced;
+  border: 1px solid #dccced;
+}
+
+.login-header {
+  display: block;
+  text-align: center;
+  padding: 50px;
+  background-color: #dccced;
+}
+
+.login-header h2 {
   padding-bottom: 20px;
   font-size: 70px;
 }

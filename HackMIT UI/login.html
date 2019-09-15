@@ -60,31 +60,27 @@
 			<div class="main-wrapper">
 				<!-- Header -->
 			</div class="container">
-			<div class="add-recipe-header">
-				<h2 class="text-white text-center">Add a Recipe</h2>
+			<div class="login-header">
+				<h2 class="text-white text-center">Log In</h2>
+				<h4>Don't have an account? <a href="signup.html">Sign up!</a></h4>
 			</div>
 		</div>
 		<!-- End Header -->
 
 		<!-- Start Shopping List -->
 		<section class="about-generic-area section-gap">
-			<div class="container add-ingredients">
-				<form class="ingredients-form" id='recipe-input' action="#">
-					<h3>Recipe Title</h3>
+			<div class="container add-user">
+				<form class="user-form" action="#">
+					<h3>Email</h3>
 					<div class="mt-10">
-						<input type="text" name="title" placeholder="title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'title'" required class="single-input">
+						<input type="email" name="email" placeholder="email@email.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'email@email.com'" required class="single-input">
 					</div>
-					<h3>Ingredients</h3>
-					<div id='ingredients-list'>
-						<div id="ingredients-field" class="mt-10">
-							<input type="text" name="ingredient" placeholder="ingredient" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ingredient'" required class="single-input">
-						</div>
+					<h3>Password</h3>
+					<div class="mt-10">
+						<input type="password" name="password" placeholder="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'password'" required class="single-input">
 					</div>
-					<a id = "ingredient-button" onClick="nextIngredient();" class="genric-btn primary small">next ingredient</a>
-					<h3>Directions</h3>
-					<textarea class="single-input" placeholder="add directions"></textarea>
 				</form>	
-				<a href="recipes.html" class="genric-btn primary circle addrecipe-button">SUBMIT</a>
+				<a href="homepage.html" class="genric-btn primary circle login-button">ENTER</a>
 			</div>
 		</section>
 		<!-- End Shopping List -->		
